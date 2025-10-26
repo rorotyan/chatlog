@@ -5,82 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>チャットログ</title>
     <style>
-        body {
-            font-family: sans-serif;
-            background-color: #778899; /* 元の背景色 */
-            padding: 12px;
-            max-width: 100%;
-            margin: auto;
-        }
+body {
+    font-family: sans-serif;
+    background-color: #778899;
+    padding: 10px;
+    max-width: 100%;
+    margin: auto;
+}
 
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
-        }
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
 
-        /* 日付や区切り線のメタ情報は小さいまま */
-        .meta {
-            font-size: 0.8em;
-            color: #eee;
-            margin: 5px 0;
-        }
+.meta {
+    font-size: 0.75em; /* 日付は小さめ */
+    color: #eee;
+    margin: 5px 0;
+}
 
-        .chat {
-            display: flex;
-            align-items: flex-start;
-            margin: 14px 0;
-        }
+.chat {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+}
 
-        .icon {
-            width: 70px; /* アイコンを大きく */
-            height: 70px;
-            border-radius: 50%;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
+.icon {
+    width: 45px;   /* LINE風アイコンサイズ */
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
 
-        .bubble {
-            background-color: white;
-            border-radius: 20px;
-            padding: 16px 20px;
-            position: relative;
-            max-width: 90%;
-            word-break: break-word;
-            line-height: 1.5;
-        }
+.bubble {
+    background-color: white;
+    border-radius: 12px;  /* 角丸控えめ */
+    padding: 10px 14px;   /* 内側余白控えめ */
+    position: relative;
+    max-width: 75%;       /* 画面幅7割ほど */
+    word-break: break-word;
+    line-height: 1.4;
+}
 
-        /* チャット本文を統一サイズに */
-        .bubble div {
-            white-space: pre-wrap;
-            font-size: 20px; /* 絶対値で統一 */
-        }
+/* 本文文字サイズを統一 */
+.bubble div {
+    white-space: pre-wrap;
+    font-size: 16px;  /* LINE風サイズ */
+}
 
-        /* 吹き出し内のメタ情報は本文サイズと独立 */
-        .bubble .meta {
-            font-size: 0.85em;
-            color: #555;
-            margin-bottom: 4px;
-        }
+/* 吹き出し内のメタ情報は小さいまま */
+.bubble .meta {
+    font-size: 0.8em;
+    color: #555;
+    margin-bottom: 4px;
+}
 
-        /* スマホ向け微調整 */
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            .icon {
-                width: 70px;
-                height: 70px;
-            }
-            .bubble {
-                max-width: 95%;
-                padding: 16px 18px;
-            }
-            .bubble div {
-                font-size: 20px;
-            }
-        }
-    </style>
+/* スマホ向け微調整 */
+@media (max-width: 480px) {
+    .icon {
+        width: 45px;
+        height: 45px;
+    }
+    .bubble {
+        max-width: 90%;
+        padding: 10px 12px;
+    }
+    .bubble div {
+        font-size: 16px;
+    }
+}
+</style>
 </head>
 <body>
 <div class='meta'>2024年6月27日</div>
