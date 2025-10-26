@@ -6,11 +6,11 @@
     <style>
         body {
             font-family: sans-serif;
-            background-color: #e5ddd5; /* LINE風背景 */
+            background-color: #778899; /* 元の背景色に戻す */
             padding: 10px;
             max-width: 100%;
             margin: auto;
-            font-size: 18px; /* 文字を大きく */
+            font-size: 18px; /* 基本サイズ */
         }
 
         hr {
@@ -19,14 +19,21 @@
             margin: 20px 0;
         }
 
+        /* 日付などのメタ情報は小さめ */
+        .meta {
+            font-size: 0.8em;
+            color: #eee;
+            margin: 5px 0;
+        }
+
         .chat {
             display: flex;
             align-items: flex-start;
-            margin: 12px 0; /* 行間を少し広く */
+            margin: 12px 0;
         }
 
         .icon {
-            width: 60px;  /* アイコン大きめ */
+            width: 60px;
             height: 60px;
             border-radius: 50%;
             margin-right: 12px;
@@ -36,28 +43,24 @@
         .bubble {
             background-color: white;
             border-radius: 20px;
-            padding: 14px 16px; /* 吹き出しも大きく */
+            padding: 14px 16px;
             position: relative;
             max-width: 85%;
             word-break: break-word;
-            font-size: 1em;
-            line-height: 1.5; /* 読みやすく */
+            line-height: 1.5;
         }
 
+        /* チャット本文の文字サイズを統一 */
+        .bubble div {
+            white-space: pre-wrap;
+            font-size: 18px; /* 本文の文字サイズを統一 */
+        }
+
+        /* 吹き出し内のメタ情報は本文サイズと独立 */
         .bubble .meta {
             font-size: 0.85em;
             color: #555;
             margin-bottom: 4px;
-        }
-
-        .bubble div {
-            white-space: pre-wrap;
-        }
-
-        .meta {
-            font-size: 0.8em;
-            color: #777;
-            margin: 5px 0;
         }
 
         /* スマホ向け微調整 */
@@ -72,6 +75,9 @@
             }
             .bubble {
                 max-width: 95%;
+            }
+            .bubble div {
+                font-size: 18px; /* スマホでも本文サイズを統一 */
             }
         }
     </style>
