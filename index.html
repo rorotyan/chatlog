@@ -2,15 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>チャットログ</title>
     <style>
         body {
             font-family: sans-serif;
-            background-color: #778899; /* 元の背景色に戻す */
-            padding: 10px;
+            background-color: #778899; /* 元の背景色 */
+            padding: 12px;
             max-width: 100%;
             margin: auto;
-            font-size: 18px; /* 基本サイズ */
         }
 
         hr {
@@ -19,7 +19,7 @@
             margin: 20px 0;
         }
 
-        /* 日付などのメタ情報は小さめ */
+        /* 日付や区切り線のメタ情報は小さいまま */
         .meta {
             font-size: 0.8em;
             color: #eee;
@@ -29,12 +29,12 @@
         .chat {
             display: flex;
             align-items: flex-start;
-            margin: 12px 0;
+            margin: 14px 0;
         }
 
         .icon {
-            width: 60px;
-            height: 60px;
+            width: 70px; /* アイコンを大きく */
+            height: 70px;
             border-radius: 50%;
             margin-right: 12px;
             flex-shrink: 0;
@@ -43,17 +43,17 @@
         .bubble {
             background-color: white;
             border-radius: 20px;
-            padding: 14px 16px;
+            padding: 16px 20px;
             position: relative;
-            max-width: 85%;
+            max-width: 90%;
             word-break: break-word;
             line-height: 1.5;
         }
 
-        /* チャット本文の文字サイズを統一 */
+        /* チャット本文を統一サイズに */
         .bubble div {
             white-space: pre-wrap;
-            font-size: 18px; /* 本文の文字サイズを統一 */
+            font-size: 20px; /* 絶対値で統一 */
         }
 
         /* 吹き出し内のメタ情報は本文サイズと独立 */
@@ -66,18 +66,18 @@
         /* スマホ向け微調整 */
         @media (max-width: 480px) {
             body {
-                padding: 8px;
-                font-size: 18px;
+                padding: 10px;
             }
             .icon {
-                width: 60px;
-                height: 60px;
+                width: 70px;
+                height: 70px;
             }
             .bubble {
                 max-width: 95%;
+                padding: 16px 18px;
             }
             .bubble div {
-                font-size: 18px; /* スマホでも本文サイズを統一 */
+                font-size: 20px;
             }
         }
     </style>
