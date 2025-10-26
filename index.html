@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>チャットログ</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #778899;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            font-size: 12px;
+        }
+        .chat {
+            display: flex;
+            align-items: flex-start;
+            margin: 8px 0;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .bubble {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            max-width: 80%;
+            word-break: break-word;
+            font-size: 12px;
+        }
+        .bubble .meta {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 1px;
+        }
+        .bubble div {
+            white-space: pre-wrap;
+        }
+        .meta {
+            font-size: 0.7em;
+            color: #eee;
+            margin: 5px 0 5px 0;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class='meta'>2024年6月27日</div>
+
+<div class="chat">
+    <img class="icon" src="images/伏見ガク.png" alt="伏見ガク">
+    <div class="bubble">
+        <div class="meta">伏見ガク・21:11</div>
+        <div>第二回○○しないと出られない部屋へようこそ！<br>〜大まかな流れ(テンプレ)〜<br>①管理人によりランダムで2〜4名が入室できる非公開部屋に振分けられます。<br>②招待後、一度点呼を取ります。全員の反応が確認出来次第開始します。<br>③管理人よりお題が配布されるのでそれを実行して下さい。<br>④配布後は管理人は部屋から退室します。(マッチングが2人部屋の場合、管理人退出後は個別に移動しても構いません)<br>⑤お題クリアにより解錠となります。部屋から出た後は掲示板に報告をお願いします(任意)<br>※お題実行後、解錠した部屋は全員退室してください。但し強制はしません。<br>※管理人による監視の目はありませんので、ある程度自由に解釈して頂いて結構です。<br>※部屋から出た後の掲示板での報告で題材に触れて頂いても構いませんし、大部屋でネタにして貰っても結構です。勿論内々での秘密でも構いません。その辺りも閉じ込められている間に話して頂ければいいかなと思っていますのでご自由にどうぞ。
+</div>
+    </div>
+</div>
+
+<div class="chat">
+    <img class="icon" src="images/伏見ガク.png" alt="伏見ガク">
+    <div class="bubble">
+        <div class="meta">伏見ガク・21:05</div>
+        <div>点呼とりまーす。反応できる時にお名前だけお願いします！</div>
+    </div>
+</div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・21:12</div>
+                <div>三枝明那！います！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・22:56</div>
+                <div>遅れました…！剣持刀也います！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/伏見ガク.png" alt="伏見ガク">
+            <div class="bubble">
+                <div class="meta">伏見ガク・23:01</div>
+                <div>お。はーい！大丈夫ですか？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:01</div>
+                <div>俺もいいよお</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:02</div>
+                <div>大丈夫だよ。よろしくお願いします</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/伏見ガク.png" alt="伏見ガク">
+            <div class="bubble">
+                <div class="meta">伏見ガク・23:02</div>
+                <div>オッケーです！じゃあお題置いていきますね！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/伏見ガク.png" alt="伏見ガク">
+            <div class="bubble">
+                <div class="meta">伏見ガク・23:02</div>
+                <div>今回のお題の中で一番過激めのお題です。
+【お互いにキスしあって下さい。場所はどこでも構いません】</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:03</div>
+                <div>なーーーるほど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/伏見ガク.png" alt="伏見ガク">
+            <div class="bubble">
+                <div class="meta">伏見ガク・23:03</div>
+                <div>質問は特にないと思うのでオレは退散します！！！よろしくお願いします！！！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:03</div>
+                <div>おっけーっす、ありがとガっくん！！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:03</div>
+                <div>なるほど！？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:04</div>
+                <div>はてさて</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:04</div>
+                <div>よかったねぇ簡単だよ剣ちゃん</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:04</div>
+                <div>とんでもな、えぇ？？？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:04</div>
+                <div>簡単、簡単なんだこれ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:05</div>
+                <div>じゃない？ちゅーするだけ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:05</div>
+                <div>しかもどこでもいいときた</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:05</div>
+                <div>そう言われたら簡単な気がしてきた</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:06</div>
+                <div>ほらぁ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:06</div>
+                <div>これ僕がもっと早く来れてたら爆速脱出きめてみんなビックリさせられたのになあ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:07</div>
+                <div>てかみんなが脱出してないのが謎なんやけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:07</div>
+                <div>もういっここれ居るはずよね？？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:07</div>
+                <div>少なくとも一組あるはずだね？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:07</div>
+                <div>恥じらいがあるんか…？彼らに</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:08</div>
+                <div>この部屋の内容外に行っちゃいけないになったとしても</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:08</div>
+                <div>これだけは持って帰りたい</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:08</div>
+                <div>クソワロタ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:08</div>
+                <div>いいよ持って帰っても</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:08</div>
+                <div>よしこれだけ持って帰ろ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:09</div>
+                <div>これ好きな子居る人かわいそうやな〜</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:09</div>
+                <div>剣ちゃんは平気そ？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:10</div>
+                <div>うーーーん最初はびっくりしたけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:10</div>
+                <div>自分がやる分には平気だな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:11</div>
+                <div>気になってる人がこれ系のお題誰かとしてるのか〜……の方がちょっと</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:11</div>
+                <div>そうよね</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:11</div>
+                <div>俺なんかそれあんま気にならんから</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:11</div>
+                <div>やっぱそうでもないんかもナ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:12</div>
+                <div>嫉妬はする方なんだっけ。わかんないよ、防衛本能とか働いてるのかもだし</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:12</div>
+                <div>メタな話してもいい？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:12</div>
+                <div>いいよ〜</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:13</div>
+                <div>もうめちゃくちゃ軽くちゅ、みたいなのでもいいんだよね？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:13</div>
+                <div>いんじゃない？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:13</div>
+                <div>俺らのさじ加減でいいわけでしょ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:14</div>
+                <div>よしよし</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:14</div>
+                <div>俺自分がする分にはある程度文字数欲しいから</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:14</div>
+                <div>剣ちゃんぷちでもええよ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:14</div>
+                <div>あっそうなの？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:14</div>
+                <div>なんか…かわいすぎん？俺が使うには</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:15</div>
+                <div>僕三枝くんが描写系ちょっとなあって言ってた記憶があったから、プチでもいいよどうぞ、の気持ちで。</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:15</div>
+                <div>そんなことある？？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:15</div>
+                <div>あ、気遣い…</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:16</div>
+                <div>可愛すぎるとかないと思うけどなあ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:16</div>
+                <div>そんな長くはいらんけど、20〜30文字くらいほしいかんじ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:16</div>
+                <div>うそぉ、俺普通にやるよりぷちのが恥ずいぞ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:16</div>
+                <div>なるほどね、音だけのやつとかは恥ずかしいやつ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:16</div>
+                <div>いやわかるよ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:16</div>
+                <div>うん</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:17</div>
+                <div>ちゅとかぎゅとかのやつ恥ずかしいあれは</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:17</div>
+                <div>頭の隅の冷静な自分がお前何言ってる？？って言い出す</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:17</div>
+                <div>てかそろそろしますか</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:17</div>
+                <div>冷静な自分に俯瞰されて口出されんの嫌過ぎるな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:18</div>
+                <div>だね。どこにしよっかな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:18</div>
+                <div>開幕最下位の俺たちがいちばん過激らしいお題一位クリアするのが面白すぎるってハナシ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:18</div>
+                <div>どこでもええよぉ、したいとこにしな〜</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:18</div>
+                <div>したいとことかねぇわ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:19</div>
+                <div>脱出後の茶番に胸を躍らせ始めちゃったじゃん</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:19</div>
+                <div>ガっくんの驚く顔が見たいぜ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:20</div>
+                <div>よしびっくりさせてやろう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:20</div>
+                <div>どっちからする？迷うなら俺からするけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:21</div>
+                <div>あ、じゃあ僕から</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:21</div>
+                <div>は〜い、どうぞ〜</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:22</div>
+                <div>うーん……(少し考える様子を見せたあと相手の片手をすくい上げ、指先に軽く唇触れさせてキスをし)</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:27</div>
+                <div>…ふは、かっけぇやん剣ちゃんってば。(指先へ触れる柔い其れに思わず楽しげに笑み零し、そのまま手首掴み引き寄せては抱き留め頬へと唇押し付け)…ん！これでいんじゃね、知らんけど。</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:28</div>
+                <div>なんか自信ないげなこと言ってたから気遣ったのに逆にいいもの見ちゃった感……</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:29</div>
+                <div>えー？何の話？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:30</div>
+                <div>いいえなんでも。</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:30</div>
+                <div>報告いきますか！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:30</div>
+                <div>そうやね、報告だけして部屋戻ろ戻ろ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:32</div>
+                <div>僕こういうのお願いしまーすってすんの苦手なんだけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:32</div>
+                <div>欲を言うとあっきーなの報告面白いから任せたい気持ちがあります。いい？？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:32</div>
+                <div>ワロタ、いいよ任せな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:32</div>
+                <div>やったー、お願いします！！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:35</div>
+                <div>でけたでけた</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:35</div>
+                <div>鍵屋になっててわらう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:35</div>
+                <div>ありがとうファンです</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:36</div>
+                <div>ファンができた</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:36</div>
+                <div>1回目の報告からのファン</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:37</div>
+                <div>やったね</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:37</div>
+                <div>こういうことばっかしてっから恋愛対象にならん</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:37</div>
+                <div>よしじゃあここの事は僕の分はいくらでも他言OKです</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:37</div>
+                <div>おっけおっけ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:37</div>
+                <div>わかるよだって面白いと思われたくなっちゃうもんな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:37</div>
+                <div>あることないこと喋るね</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:38</div>
+                <div>なっちゃう…</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:38</div>
+                <div>気づいたら恋より笑いを求めてしまう性分です</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:38</div>
+                <div>よろしくお願いします</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:38</div>
+                <div>タイマンならそんなことないんやけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:38</div>
+                <div>サークルとなるとどうしても盛り上げに注力してまう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:39</div>
+                <div>向いてない、縁繋ぎ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:39</div>
+                <div>わかるわかる</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:39</div>
+                <div>プロフに個別はそんなことないよを残すので精一杯だったけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:39</div>
+                <div>もう俺ここではお笑い芸人として生きていくことを決めようかと思う</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:40</div>
+                <div>ここは盛り上げプロがいっぱい居るので珍しく聴衆スタイルです</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:40</div>
+                <div>いいじゃん、かっけえよ貫いていってくれそのまま</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:40</div>
+                <div>恋人は外部でつくるしかない</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:41</div>
+                <div>外部でなら俺はスパダリ左になれる</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:42</div>
+                <div>気遣いとかの面で十分今もスパダリ要素あると思ってるけどな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:43</div>
+                <div>#自信もて三枝明那</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:43</div>
+                <div>でもそれをかき消すおもしろおぢさんやん今</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:43</div>
+                <div>自負があるよ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:44</div>
+                <div>おもしろおぢさんではある</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:44</div>
+                <div>てか俺次はじっくり楽しむわ〜！みたいなこと言った気がする</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:44</div>
+                <div>じっくりどころか集合から30分で</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:44</div>
+                <div>このお題でじっくり楽しむは不健全</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:44</div>
+                <div>いやでもこのお題でじっくりは</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:44</div>
+                <div>ほんとうにそう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:45</div>
+                <div>しかも気になる木がいるのに</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:45</div>
+                <div>はわわですよそんなの</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:46</div>
+                <div>でもちょっとあれです。僕気になってる人のこと割としっかり好きなのかもなと</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:46</div>
+                <div>思えるきっかけになった。ありがとう過激お題</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:46</div>
+                <div>にやにや</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:46</div>
+                <div>にこにこ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:46</div>
+                <div>頼むからキスお題だけはひいててくれるな！！！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:47</div>
+                <div>まぁこれだけ組あればそうそう引かないやろ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:47</div>
+                <div>5分の1</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:49</div>
+                <div>あ、かなかながいだはるになった</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:49</div>
+                <div>そうであることを願っとこう……</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:50</div>
+                <div>僕が起きた時には甲斐田くんになってたな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:50</div>
+                <div>見てなかったな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:50</div>
+                <div>俺もCCして〜〜</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:51</div>
+                <div>軽率にやってもいいんじゃない？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:51</div>
+                <div>おふざけが</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:51</div>
+                <div>しにくく</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:51</div>
+                <div>わらう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:51</div>
+                <div>いやそれはでかいな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:52</div>
+                <div>別にできないわけじゃないんやけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:52</div>
+                <div>僕がまさに今それを痛感してる</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:52</div>
+                <div>うんうん</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:52</div>
+                <div>ひとりで騒ぐ質じゃないっていうの？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:52</div>
+                <div>ひとりでも騒ぐにはいちばん強い、俺っていうデッキ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:52</div>
+                <div>1人で完結するおふざけにおいてあっきーなはやっぱ強いか</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:53</div>
+                <div>そういうことよね</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:53</div>
+                <div>確かにあんま……あんまいない…か…？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:53</div>
+                <div>1人で完結するお笑い</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:54</div>
+                <div>Tia1は力一さんだとおもう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:54</div>
+                <div>それはそう</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:54</div>
+                <div>ああはなれん</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:55</div>
+                <div>僕もプロレス無しでもっとふざけてえよ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:55</div>
+                <div>かなてぃーやりてぇよぉ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:55</div>
+                <div>いいじゃん。ふざけられない？</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:56</div>
+                <div>如何せん後輩なのがムズいよなと思う</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:56</div>
+                <div>いい立ち位置なんよガチで俺…………</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:57</div>
+                <div>あー、それはあるかもしんない。後輩の中ではまだ時期近いほうだけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:57</div>
+                <div>そう考えるとちょうど塩梅がいいポジションか</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・23:57</div>
+                <div>ふわっちとかもふざけられるポジな気がするけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:58</div>
+                <div>ここのメンツとの絡みを考えてもほんまに最強カード</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・23:58</div>
+                <div>ふわっちは出来んって問題がある</div>
+            </div>
+        </div>
+        <hr>
+<div class='meta'>2024年6月28日</div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・0:01</div>
+                <div>お巫山戯しやすさの観点でふわっちやりたさはあるんだけど</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・0:01</div>
+                <div>やるとしたら終盤おふざけかな</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・0:01</div>
+                <div>ていうか普通に個別戻りますか！</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・0:02</div>
+                <div>そうしよ、戻ろ戻ろ</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/剣持刀也.png" alt="剣持刀也">
+            <div class="bubble">
+                <div class="meta">剣持刀也・0:03</div>
+                <div>はーい、ありがとね</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <img class="icon" src="images/三枝明那.png" alt="三枝明那">
+            <div class="bubble">
+                <div class="meta">三枝明那・0:03</div>
+                <div>こちらこそ〜！！</div>
+            </div>
+        </div>
+
+</body>
+</html>
